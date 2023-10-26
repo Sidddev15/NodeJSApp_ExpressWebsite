@@ -1,0 +1,22 @@
+extends layout
+
+block content
+
+    .container(class="my-5")
+        .row
+            .col-lg-12
+                form(method='post', action='/contact/send')
+                    .mb-3
+                    label.form-label(for='exampleInputEmail1') Name
+                    input#exampleInputEmail1.form-control(type='text' aria-describedby='name')
+                    #emailHelp.form-text We'll register you by above name in our database.
+                    .mb-3
+                    label.form-label(for='exampleInputEmail1') Email address
+                    input#exampleInputEmail1.form-control(type='email' aria-describedby='emailHelp')
+                    #emailHelp.form-text We'll never share your email with anyone else.
+                    .mb-3
+                    label.form-label(for='exampleInputPassword1') Message
+                    textarea#exampleInputPassword1.form-control(type='text')
+                    .mb-3
+                    button.btn.btn-success(type='submit') Submit
+
